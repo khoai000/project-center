@@ -11,4 +11,9 @@ export class UserController {
 
     return newUser;
   }
+
+  @Get()
+  async getUsers() {
+    return await this.userService.getUsers();
+  }
 }

@@ -23,4 +23,12 @@ export class UserService {
       return `error: ${error}`;
     }
   }
+
+  async getUsers() {
+    try {
+      return await this.userRepo.findAll();
+    } catch (error) {
+      return `error: ${error}`;
+    }
+  }
 }
